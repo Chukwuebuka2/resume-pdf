@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Get link for bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    {% block content %}
+      
+    {% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <form method="post">
+                    {% csrf_token %}
+
+                    <!--Name-->
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" id="name" class="form-control" name="name">
+                    </div>
+            
+                    <!--Email Address-->
+                    <div class="form-group">
+                        <label for="">Email address</label>
+                        <input type="text" id="email" class="form-control" name="email">
+                    </div>
+                    
+                    <!--Phone Number-->
+                    <div class="form-group">
+                        <label for="">Phone</label>
+                        <input type="text" id="phone" class="form-control" name="phone">
+                    </div>
+            
+                    <!--Summary-->
+                    <div class="form-group">
+                        <label for="">About You</label>
+                        <textarea rows="10" cols="30" type="text" id="summary" class="form-control" name="summary"></textarea>
+                    </div>
+            
+                    <!--Degree-->
+                    <div class="form-group">
+                        <label for="">Degree</label>
+                        <input type="text" id="degree" class="form-control" name="degree">
+                    </div>
+            
+                    <!--School-->
+                    <div class="form-group">
+                        <label for="">School</label>
+                        <input type="text" id="school" class="form-control" name="school">
+                    </div>
+            
+                    <!--University-->
+                    <div class="form-group">
+                        <label for="">University</label>
+                        <input type="text" id="university" class="form-control" name="university">
+                    </div>
+            
+                    <!--Previous Works-->
+                    <div class="form-group">
+                        <label for="">Previous Work</label>
+                        <textarea rows="10" cols="30" type="text" id="previous_work" class="form-control" name="previous_work"></textarea>
+                    </div>
+            
+                    <!--Skills-->
+                    <div class="form-group">
+                        <label for="">Skills</label>
+                        <textarea rows="10" cols="30" type="text" id="skills" class="form-control" name="skills"></textarea>
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
